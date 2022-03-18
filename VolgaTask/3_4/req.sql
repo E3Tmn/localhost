@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS ResultEvent (
 );
 
 SELECT Man.FIO, count(Man.FIO) sm
-FROM Man LEFT JOIN ResultEvent 
+FROM Man RIGHT JOIN ResultEvent 
 ON Man.id = ResultEvent.idAthlete
 group by MAN.FIO
 order by sm desc
